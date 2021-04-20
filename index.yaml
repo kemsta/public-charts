@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  glider:
+  - apiVersion: v2
+    appVersion: v0.13.2
+    created: "2021-04-20T14:55:14.093645061Z"
+    description: glider forward proxy helm chart
+    digest: 7d30d3e05025495ce032f14c8e235aee1d0a53b3eac376e6f464ada2a65b28f8
+    name: glider
+    type: application
+    urls:
+    - https://github.com/kemsta/public-charts/releases/download/glider-0.1.0/glider-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-20T14:55:14.093653362Z"
