@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "glider.fullname" . }}-config
+data:
+  glider.conf: {{ toYaml .Values.glider.config | nindent 4}}
+ 

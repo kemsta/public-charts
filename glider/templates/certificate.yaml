@@ -1,0 +1,21 @@
+{{- if .Values.tls.enabled }}
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: {{ include "glider.fullname" . }}-crt
+spec:
+  secretName: {{ include "glider.fullname" . }}-tls-secret
+  {{- with .Values.tls }}
+  issuerRef:
+    kind: {{ .issuerKind}}
+    name: {{ .issuerName}}
+  commonName: {{ .commonName }}
+  {{- if .dnsNames }}
+  dnsNames: 
+  {{- toYaml .dnsNames | nindent 2 }}
+  {{- else }}
+  dnsNames: 
+  - {{ .commonName }}
+  {{- end }}
+  {{- end }}
+{{- end }}
