@@ -4,6 +4,6 @@ description: glider forward proxy helm chart
 
 type: application
 
-version: 0.1.2
+version: 0.1.3
 
 appVersion: "v0.15.3"
